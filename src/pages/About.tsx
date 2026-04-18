@@ -236,6 +236,33 @@ const About = () => {
         </div>
       </section>
 
+      <Divider />
+
+      {/* Equipo */}
+      <section id="equipo" className="py-24 md:py-32 scroll-mt-32">
+        <div className="container">
+          <p className="eyebrow">{t("about.teamEyebrow")}</p>
+          <h2 className="display mt-5 text-3xl md:text-5xl max-w-3xl">{t("about.teamTitle")}</h2>
+          <p className="mt-8 max-w-2xl text-lg text-foreground/75 leading-relaxed">{t("about.teamBody")}</p>
+
+          <ul className="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-foreground/10 border border-foreground/10">
+            {team.map((m, i) => (
+              <li key={i} className="bg-background p-8">
+                <div className="w-16 h-16 border border-foreground/20 flex items-center justify-center font-display text-xl text-seal">
+                  {m.initials}
+                </div>
+                <p className="mt-6 eyebrow text-foreground/50">{tx(m.role, lang)}</p>
+                <p className="mt-3 text-foreground/75 leading-relaxed">{tx(m.bio, lang)}</p>
+              </li>
+            ))}
+          </ul>
+
+          <p className="mt-8 text-xs uppercase tracking-[0.18em] text-muted-foreground">
+            {t("about.teamSoon")}
+          </p>
+        </div>
+      </section>
+
       {/* Manifiesto */}
       <section id="manifiesto" className="py-32 md:py-44 bg-foreground text-background relative overflow-hidden scroll-mt-32">
         <span className="kanji-mark absolute -right-10 -top-10 text-[28rem] text-background/[0.04]">絆</span>
