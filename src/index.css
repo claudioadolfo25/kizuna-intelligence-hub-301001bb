@@ -37,6 +37,13 @@
     --seal: 351 76% 42%;               /* #C8102E */
     --seal-foreground: 48 24% 97%;
 
+    /* Gold — dark mode kanji accent */
+    --gold: 43 74% 52%;                /* #E0A82E */
+
+    /* Kanji watermark color (theme-aware) */
+    --kanji: 351 76% 42%;
+    --kanji-opacity: 0.07;
+
     --destructive: 0 70% 45%;
     --destructive-foreground: 48 24% 97%;
 
@@ -77,8 +84,11 @@
     --muted-foreground: 0 0% 60%;
     --accent: 0 0% 12%;
     --accent-foreground: 48 24% 95%;
-    --seal: 351 76% 52%;
-    --seal-foreground: 48 24% 97%;
+    --seal: 43 74% 58%;                /* gold replaces seal in dark for accents */
+    --seal-foreground: 0 0% 6%;
+    --gold: 43 74% 58%;
+    --kanji: 43 74% 58%;
+    --kanji-opacity: 0.10;
     --destructive: 0 70% 45%;
     --destructive-foreground: 48 24% 95%;
     --border: 0 0% 18%;
@@ -129,10 +139,10 @@
     line-height: 1.05;
   }
 
-  /* Kanji ornament watermark */
+  /* Kanji ornament watermark — themed (seal/red in light, gold in dark) */
   .kanji-mark {
     font-family: var(--font-jp);
-    color: hsl(var(--foreground) / 0.04);
+    color: hsl(var(--kanji) / var(--kanji-opacity));
     user-select: none;
     pointer-events: none;
   }

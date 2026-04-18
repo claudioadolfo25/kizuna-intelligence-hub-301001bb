@@ -3,6 +3,7 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "./LanguageSwitcher";
+import ThemeToggle from "./ThemeToggle";
 
 const Navbar = () => {
   const { t } = useTranslation();
@@ -106,6 +107,7 @@ const Navbar = () => {
 
         <div className="hidden lg:flex items-center gap-6">
           <LanguageSwitcher />
+          <ThemeToggle />
           <Link
             to="/contacto"
             className="text-xs uppercase tracking-[0.2em] border-b border-foreground/40 pb-0.5 hover:border-seal hover:text-seal transition-colors"
@@ -141,7 +143,10 @@ const Navbar = () => {
             <MobileLink to="/recursos" label={t("nav.resources")} />
             <div className="hairline my-4" />
             <div className="flex items-center justify-between">
-              <LanguageSwitcher />
+              <div className="flex items-center gap-4">
+                <LanguageSwitcher />
+                <ThemeToggle />
+              </div>
               <Link
                 to="/contacto"
                 className="text-xs uppercase tracking-[0.2em] text-seal border-b border-seal pb-0.5"
