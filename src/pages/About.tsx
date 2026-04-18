@@ -18,7 +18,35 @@ const About = () => {
     { id: "vision", label: { es: "Visión", en: "Vision" } },
     { id: "alcance", label: { es: "Alcance", en: "Scope" } },
     { id: "objetivos", label: { es: "Objetivos", en: "Objectives" } },
+    { id: "equipo", label: { es: "Equipo", en: "Team" } },
     { id: "manifiesto", label: { es: "Manifiesto", en: "Manifesto" } },
+  ];
+
+  const team = [
+    {
+      initials: "CK",
+      role: { es: "Fundador · Dirección metodológica", en: "Founder · Methodological direction" },
+      bio: {
+        es: "Lidera la doctrina Co-Kizuna y la integración con estándares internacionales (OCDE, BID).",
+        en: "Leads the Co-Kizuna doctrine and integration with international standards (OECD, IDB).",
+      },
+    },
+    {
+      initials: "AM",
+      role: { es: "Asesor · Inteligencia de datos", en: "Advisor · Data intelligence" },
+      bio: {
+        es: "Diseña los motores analíticos detrás de QuiverCL y GaiaCL bajo el principio Kaiji.",
+        en: "Designs the analytic engines behind QuiverCL and GaiaCL under the Kaiji principle.",
+      },
+    },
+    {
+      initials: "RP",
+      role: { es: "Asesor · Compras públicas", en: "Advisor · Public procurement" },
+      bio: {
+        es: "Veinte años en pliegos, evaluación y auditoría en mercados latinoamericanos.",
+        en: "Twenty years in tenders, evaluation and audit across Latin American markets.",
+      },
+    },
   ];
 
   return (
