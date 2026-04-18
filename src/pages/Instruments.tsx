@@ -43,9 +43,12 @@ const Instruments = () => {
           ))}
         </div>
 
-        <div className="container mt-20">
+        <div className="container mt-20 flex flex-wrap gap-6 items-center">
           <Link to="/contacto" className="inline-flex items-center gap-2 bg-foreground text-background px-6 py-3 text-sm uppercase tracking-[0.18em] hover:bg-seal transition-colors">
             {t("nav.demo")} <ArrowRight className="w-4 h-4" />
+          </Link>
+          <Link to="/herramientas" className="inline-flex items-center gap-2 text-sm uppercase tracking-[0.18em] border-b border-foreground/40 pb-1 hover:border-seal hover:text-seal transition-colors">
+            {lang === "es" ? "Ver herramientas Co-Kizuna" : "See Co-Kizuna tools"} <ArrowUpRight className="w-3.5 h-3.5" />
           </Link>
         </div>
       </section>
