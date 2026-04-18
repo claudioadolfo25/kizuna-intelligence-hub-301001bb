@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { ArrowRight } from "lucide-react";
 import SEO from "@/components/SEO";
+import EmailCapture from "@/components/EmailCapture";
 import { principles, dimensions, objectives, roadmap } from "@/data/cokizuna";
 import { useLang, tx } from "@/lib/lang";
 
@@ -280,9 +281,18 @@ const About = () => {
             <p>Chile es nuestro comienzo. El mundo es nuestro mercado. La inteligencia es nuestra causa.</p>
           </div>
 
-          <Link to="/contacto" className="mt-14 inline-flex items-center gap-2 bg-background text-foreground px-6 py-3 text-sm uppercase tracking-[0.18em] hover:bg-seal hover:text-seal-foreground transition-colors">
-            {t("nav.demo")} <ArrowRight className="w-4 h-4" />
-          </Link>
+          <div className="mt-14 grid md:grid-cols-2 gap-12 items-start">
+            <Link to="/contacto" className="inline-flex items-center gap-2 bg-background text-foreground px-6 py-3 text-sm uppercase tracking-[0.18em] hover:bg-seal hover:text-seal-foreground transition-colors">
+              {t("nav.demo")} <ArrowRight className="w-4 h-4" />
+            </Link>
+            <EmailCapture
+              variant="dark"
+              source="manifesto"
+              title={lang === "es" ? "Únase al Manifiesto" : "Join the Manifesto"}
+              description={lang === "es" ? "Le enviamos el manifiesto y futuras actualizaciones." : "We'll send you the manifesto and future updates."}
+              ctaLabel={lang === "es" ? "Recibir manifiesto" : "Send manifesto"}
+            />
+          </div>
         </div>
       </section>
     </>
