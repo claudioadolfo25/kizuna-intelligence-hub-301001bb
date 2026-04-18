@@ -11,6 +11,8 @@ import Principles from "./pages/Principles";
 import Decisions from "./pages/Decisions";
 import Instruments from "./pages/Instruments";
 import DecisionCanvas from "./pages/DecisionCanvas";
+import Tools from "./pages/Tools";
+import ToolDetail from "./pages/ToolDetail";
 import Solutions from "./pages/Solutions";
 import Impact from "./pages/Impact";
 import Resources from "./pages/Resources";
@@ -34,6 +36,8 @@ const App = () => (
             <Route path="/metodologia/decisiones" element={<Decisions />} />
             <Route path="/instrumentos" element={<Instruments />} />
             <Route path="/instrumentos/decision-canvas" element={<DecisionCanvas />} />
+            <Route path="/herramientas" element={<Tools />} />
+            <Route path="/herramientas/:slug" element={<ToolDetail />} />
             <Route path="/soluciones" element={<Solutions />} />
             <Route path="/impacto" element={<Impact />} />
             <Route path="/recursos" element={<Resources />} />
