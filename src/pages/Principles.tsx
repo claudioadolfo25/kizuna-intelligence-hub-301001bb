@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { Plus, Minus } from "lucide-react";
+import { Plus, Minus, ArrowUpRight } from "lucide-react";
 import SEO from "@/components/SEO";
 import { principles } from "@/data/cokizuna";
+import { toolsByPrinciple, toolStatusLabel } from "@/data/tools";
 import { useLang, tx } from "@/lib/lang";
 
 const Principles = () => {
@@ -55,6 +57,7 @@ const Principles = () => {
                         <Block label={lang === "es" ? "Esencia" : "Essence"} text={tx(p.essence, lang)} />
                         <Block label={lang === "es" ? "Aplicación" : "Application"} text={tx(p.application, lang)} />
                         <Block label={lang === "es" ? "Antiprincipio · qué NO hacer" : "Antiprinciple · what NOT to do"} text={tx(p.anti, lang)} muted />
+                        <ToolBadges jp={p.jp} lang={lang} />
                       </div>
                     </div>
                   )}
@@ -74,5 +77,30 @@ const Block = ({ label, text, muted }: { label: string; text: string; muted?: bo
     <p className={`mt-2 text-lg leading-relaxed ${muted ? "text-foreground/55 italic" : "text-foreground/85"}`}>{text}</p>
   </div>
 );
+
+const ToolBadges = ({ jp, lang }: { jp: string; lang: "es" | "en" }) => {
+  const matched = toolsByPrinciple(jp);
+  if (matched.length === 0) return null;
+  return (
+    <div>
+      <p className="eyebrow">{lang === "es" ? "Herramientas que aplican este principio" : "Tools applying this principle"}</p>
+      <div className="mt-3 flex flex-wrap gap-2">
+        {matched.map((tool) => (
+          <Link
+            key={tool.slug}
+            to={`/herramientas/${tool.slug}`}
+            className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.18em] border border-foreground/20 px-3 py-1.5 hover:border-seal hover:text-seal transition-colors"
+          >
+            {tool.name}
+            <span className="text-[9px] text-muted-foreground normal-case tracking-normal">
+              · {toolStatusLabel(tool.status, lang)}
+            </span>
+            <ArrowUpRight className="w-3 h-3" />
+          </Link>
+        ))}
+      </div>
+    </div>
+  );
+};
 
 export default Principles;

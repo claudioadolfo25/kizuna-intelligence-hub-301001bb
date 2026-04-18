@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { ArrowRight } from "lucide-react";
 import SEO from "@/components/SEO";
+import EmailCapture from "@/components/EmailCapture";
 import { principles, dimensions, objectives, roadmap } from "@/data/cokizuna";
 import { useLang, tx } from "@/lib/lang";
 
@@ -18,7 +19,35 @@ const About = () => {
     { id: "vision", label: { es: "Visión", en: "Vision" } },
     { id: "alcance", label: { es: "Alcance", en: "Scope" } },
     { id: "objetivos", label: { es: "Objetivos", en: "Objectives" } },
+    { id: "equipo", label: { es: "Equipo", en: "Team" } },
     { id: "manifiesto", label: { es: "Manifiesto", en: "Manifesto" } },
+  ];
+
+  const team = [
+    {
+      initials: "CK",
+      role: { es: "Fundador · Dirección metodológica", en: "Founder · Methodological direction" },
+      bio: {
+        es: "Lidera la doctrina Co-Kizuna y la integración con estándares internacionales (OCDE, BID).",
+        en: "Leads the Co-Kizuna doctrine and integration with international standards (OECD, IDB).",
+      },
+    },
+    {
+      initials: "AM",
+      role: { es: "Asesor · Inteligencia de datos", en: "Advisor · Data intelligence" },
+      bio: {
+        es: "Diseña los motores analíticos detrás de QuiverCL y GaiaCL bajo el principio Kaiji.",
+        en: "Designs the analytic engines behind QuiverCL and GaiaCL under the Kaiji principle.",
+      },
+    },
+    {
+      initials: "RP",
+      role: { es: "Asesor · Compras públicas", en: "Advisor · Public procurement" },
+      bio: {
+        es: "Veinte años en pliegos, evaluación y auditoría en mercados latinoamericanos.",
+        en: "Twenty years in tenders, evaluation and audit across Latin American markets.",
+      },
+    },
   ];
 
   return (
@@ -208,6 +237,33 @@ const About = () => {
         </div>
       </section>
 
+      <Divider />
+
+      {/* Equipo */}
+      <section id="equipo" className="py-24 md:py-32 scroll-mt-32">
+        <div className="container">
+          <p className="eyebrow">{t("about.teamEyebrow")}</p>
+          <h2 className="display mt-5 text-3xl md:text-5xl max-w-3xl">{t("about.teamTitle")}</h2>
+          <p className="mt-8 max-w-2xl text-lg text-foreground/75 leading-relaxed">{t("about.teamBody")}</p>
+
+          <ul className="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-foreground/10 border border-foreground/10">
+            {team.map((m, i) => (
+              <li key={i} className="bg-background p-8">
+                <div className="w-16 h-16 border border-foreground/20 flex items-center justify-center font-display text-xl text-seal">
+                  {m.initials}
+                </div>
+                <p className="mt-6 eyebrow text-foreground/50">{tx(m.role, lang)}</p>
+                <p className="mt-3 text-foreground/75 leading-relaxed">{tx(m.bio, lang)}</p>
+              </li>
+            ))}
+          </ul>
+
+          <p className="mt-8 text-xs uppercase tracking-[0.18em] text-muted-foreground">
+            {t("about.teamSoon")}
+          </p>
+        </div>
+      </section>
+
       {/* Manifiesto */}
       <section id="manifiesto" className="py-32 md:py-44 bg-foreground text-background relative overflow-hidden scroll-mt-32">
         <span className="kanji-mark absolute -right-10 -top-10 text-[28rem] text-background/[0.04]">絆</span>
@@ -225,9 +281,18 @@ const About = () => {
             <p>Chile es nuestro comienzo. El mundo es nuestro mercado. La inteligencia es nuestra causa.</p>
           </div>
 
-          <Link to="/contacto" className="mt-14 inline-flex items-center gap-2 bg-background text-foreground px-6 py-3 text-sm uppercase tracking-[0.18em] hover:bg-seal hover:text-seal-foreground transition-colors">
-            {t("nav.demo")} <ArrowRight className="w-4 h-4" />
-          </Link>
+          <div className="mt-14 grid md:grid-cols-2 gap-12 items-start">
+            <Link to="/contacto" className="inline-flex items-center gap-2 bg-background text-foreground px-6 py-3 text-sm uppercase tracking-[0.18em] hover:bg-seal hover:text-seal-foreground transition-colors">
+              {t("nav.demo")} <ArrowRight className="w-4 h-4" />
+            </Link>
+            <EmailCapture
+              variant="dark"
+              source="manifesto"
+              title={lang === "es" ? "Únase al Manifiesto" : "Join the Manifesto"}
+              description={lang === "es" ? "Le enviamos el manifiesto y futuras actualizaciones." : "We'll send you the manifesto and future updates."}
+              ctaLabel={lang === "es" ? "Recibir manifiesto" : "Send manifesto"}
+            />
+          </div>
         </div>
       </section>
     </>

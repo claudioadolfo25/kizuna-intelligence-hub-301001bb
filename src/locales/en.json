@@ -7,6 +7,7 @@
     "decisions": "6 Decisions",
     "instruments": "Instruments",
     "decisionCanvas": "Decision Canvas",
+    "tools": "Tools",
     "solutions": "Solutions",
     "impact": "Global Impact",
     "resources": "Resources",
@@ -114,7 +115,11 @@
     "objectivesEyebrow": "Strategic objectives",
     "objectivesTitle": "What we pursue.",
     "manifestoEyebrow": "Manifesto",
-    "manifestoTitle": "The Co-Kizuna Manifesto."
+    "manifestoTitle": "The Co-Kizuna Manifesto.",
+    "teamEyebrow": "Team",
+    "teamTitle": "Who builds Co-Kizuna.",
+    "teamBody": "A network of practitioners combining Chilean public-procurement experience with Japanese methodological discipline.",
+    "teamSoon": "Full bios coming soon."
   },
   "methodology": {
     "title": "12 principles. 11 dimensions. 6 decisions. One methodology.",

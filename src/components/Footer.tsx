@@ -27,6 +27,7 @@ const Footer = () => {
             <li><Link to="/nosotros" className="hover:text-seal transition-colors">{t("nav.about")}</Link></li>
             <li><Link to="/metodologia" className="hover:text-seal transition-colors">{t("nav.methodology")}</Link></li>
             <li><Link to="/instrumentos" className="hover:text-seal transition-colors">{t("nav.instruments")}</Link></li>
+            <li><Link to="/herramientas" className="hover:text-seal transition-colors">{t("nav.tools")}</Link></li>
             <li><Link to="/soluciones" className="hover:text-seal transition-colors">{t("nav.solutions")}</Link></li>
             <li><Link to="/impacto" className="hover:text-seal transition-colors">{t("nav.impact")}</Link></li>
             <li><Link to="/recursos" className="hover:text-seal transition-colors">{t("nav.resources")}</Link></li>

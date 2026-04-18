@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { z } from "zod";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
@@ -19,13 +20,19 @@ const Contact = () => {
     message: z.string().trim().max(1000, t("contact.errors.tooLong")).optional().or(z.literal("")),
   });
 
+  const [searchParams] = useSearchParams();
+  const initialActor = (() => {
+    const a = searchParams.get("actor");
+    return a === "buyer" || a === "other" ? a : "provider";
+  })() as "provider" | "buyer" | "other";
+
   const [form, setForm] = useState({
     name: "",
     company: "",
     role: "",
     email: "",
     country: "",
-    actorType: "provider" as "provider" | "buyer" | "other",
+    actorType: initialActor,
     message: "",
   });
   const [errors, setErrors] = useState<Record<string, string>>({});

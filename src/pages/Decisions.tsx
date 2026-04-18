@@ -1,6 +1,9 @@
+import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { ArrowUpRight } from "lucide-react";
 import SEO from "@/components/SEO";
 import { decisions } from "@/data/cokizuna";
+import { toolsByDecision, toolStatusLabel } from "@/data/tools";
 import { useLang, tx } from "@/lib/lang";
 
 const Decisions = () => {
@@ -53,19 +56,44 @@ const Decisions = () => {
       <section className="py-20">
         <div className="container">
           <div className="grid md:grid-cols-2 gap-px bg-foreground/10 border border-foreground/10">
-            {decisions.map((d, i) => (
-              <article key={i} className="bg-background p-10">
-                <p className="eyebrow text-foreground/40">0{i + 1} · {tx(d.level, lang)}</p>
-                <h2 className="font-display text-3xl mt-3">{tx(d.category, lang)}</h2>
-                <p className="mt-3 text-foreground/65 italic">{tx(d.question, lang)}</p>
-                <p className="mt-5 text-foreground/80 leading-relaxed">{tx(d.body, lang)}</p>
-                <div className="mt-6 flex gap-6 text-xs uppercase tracking-[0.18em] text-muted-foreground">
-                  <span>{tx(d.horizon, lang)}</span>
-                  <span>·</span>
-                  <span>{tx(d.actor, lang)}</span>
-                </div>
-              </article>
-            ))}
+            {decisions.map((d, i) => {
+              const matched = toolsByDecision(d.category.es);
+              return (
+                <article key={i} className="bg-background p-10">
+                  <p className="eyebrow text-foreground/40">0{i + 1} · {tx(d.level, lang)}</p>
+                  <h2 className="font-display text-3xl mt-3">{tx(d.category, lang)}</h2>
+                  <p className="mt-3 text-foreground/65 italic">{tx(d.question, lang)}</p>
+                  <p className="mt-5 text-foreground/80 leading-relaxed">{tx(d.body, lang)}</p>
+                  <div className="mt-6 flex gap-6 text-xs uppercase tracking-[0.18em] text-muted-foreground">
+                    <span>{tx(d.horizon, lang)}</span>
+                    <span>·</span>
+                    <span>{tx(d.actor, lang)}</span>
+                  </div>
+                  {matched.length > 0 && (
+                    <div className="mt-8 pt-6 border-t border-foreground/10">
+                      <p className="eyebrow text-foreground/40">
+                        {lang === "es" ? "Herramientas" : "Tools"}
+                      </p>
+                      <div className="mt-3 flex flex-wrap gap-2">
+                        {matched.map((tool) => (
+                          <Link
+                            key={tool.slug}
+                            to={`/herramientas/${tool.slug}`}
+                            className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.18em] border border-foreground/20 px-3 py-1.5 hover:border-seal hover:text-seal transition-colors"
+                          >
+                            {tool.name}
+                            <span className="text-[9px] text-muted-foreground normal-case tracking-normal">
+                              · {toolStatusLabel(tool.status, lang)}
+                            </span>
+                            <ArrowUpRight className="w-3 h-3" />
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </article>
+              );
+            })}
           </div>
 
           <div className="mt-16 reinforcement max-w-3xl">{t("methodology.decisionsReinforcement")}</div>

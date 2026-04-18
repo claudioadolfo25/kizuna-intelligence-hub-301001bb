@@ -90,6 +90,9 @@ const Navbar = () => {
             )}
           </div>
 
+          <NavLink to="/herramientas" className={linkCls}>
+            {t("nav.tools")}
+          </NavLink>
           <NavLink to="/soluciones" className={linkCls}>
             {t("nav.solutions")}
           </NavLink>
@@ -132,6 +135,7 @@ const Navbar = () => {
             <MobileLink to="/metodologia/decisiones" label={`— ${t("nav.decisions")}`} indent />
             <MobileLink to="/instrumentos" label={t("nav.instruments")} />
             <MobileLink to="/instrumentos/decision-canvas" label={`— ${t("nav.decisionCanvas")}`} indent />
+            <MobileLink to="/herramientas" label={t("nav.tools")} />
             <MobileLink to="/soluciones" label={t("nav.solutions")} />
             <MobileLink to="/impacto" label={t("nav.impact")} />
             <MobileLink to="/recursos" label={t("nav.resources")} />
