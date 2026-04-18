@@ -60,6 +60,9 @@ export default {
           DEFAULT: "hsl(var(--seal))",
           foreground: "hsl(var(--seal-foreground))",
         },
+        gold: {
+          DEFAULT: "hsl(var(--gold))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
