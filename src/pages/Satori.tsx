@@ -52,7 +52,7 @@ const flow = [
 
 const testimonials = [
   { quote: "Aumentamos nuestra tasa de éxito del 23% al 78% en 3 meses. SATORI cambió nuestra forma de competir.", who: "Constructora ABC", role: "Proveedor categoría obras públicas" },
-  { quote: "Una sola persona en mi empresa hace ahora lo que antes requería un equipo de 5. OPOC es real.", who: "Servicios Tecnológicos M.", role: "Proveedor TI · Región Metropolitana" },
+  { quote: "Una sola persona en mi empresa hace ahora lo que antes requería un equipo de 50. El modelo OPC 1∞ es real.", who: "Servicios Tecnológicos M.", role: "Proveedor TI · Región Metropolitana" },
   { quote: "Ver a los agentes razonar en la sala Matrix me dio confianza. Ya no es una caja negra.", who: "Consultora del Sur", role: "Proveedor servicios profesionales" },
 ];
 
@@ -161,10 +161,13 @@ const Satori = () => {
             ))}
           </div>
           <div className="mt-12 border border-foreground/15 p-8 max-w-2xl">
-            <p className="eyebrow mb-3">OPOC</p>
+            <p className="eyebrow mb-3">OPC model · 1∞</p>
             <h3 className="font-display text-2xl mb-2">Una Persona, Una Empresa.</h3>
             <p className="text-sm text-muted-foreground">
               Con SATORI, una sola persona puede operar como una empresa completa. Escala sin crecer tu equipo.
+              <span className="block mt-3 text-foreground/80 font-medium">
+                Una OPC con metodología Zentei vence a una firma de 50 personas sin método. Esa es la asimetría 1∞.
+              </span>
             </p>
           </div>
         </div>
@@ -217,7 +220,8 @@ const Satori = () => {
         <span className="kanji-mark absolute -left-8 top-10 text-[18rem] leading-none hidden md:block">七</span>
         <div className="container relative">
           <p className="eyebrow mb-6">七つの決定 · Las 7 decisiones</p>
-          <h2 className="display text-3xl md:text-5xl max-w-3xl mb-6">De los datos a la conclusión.</h2>
+          <h2 className="display text-3xl md:text-5xl max-w-3xl mb-3">De los datos a la conclusión.</h2>
+          <p className="font-display text-xl text-seal mb-6">1∞ · Zentei antes de licitar.</p>
           <p className="text-muted-foreground max-w-2xl mb-12">
             Seis decisiones en paralelo convergen en una séptima: el veredicto del experto.
           </p>

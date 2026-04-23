@@ -12,8 +12,8 @@ const Home = () => {
   return (
     <>
       <SEO
-        title="Co-Kizuna · Inteligencia global para compras públicas"
-        description="Metodología global de inteligencia para compras públicas. Doce principios. Once dimensiones. Seis decisiones. Chile, nuestro origen. El mundo, nuestro mercado."
+        title="Co-Kizuna · Zentei antes de licitar · Inteligencia para compras públicas"
+        description="La metodología OPC que convierte a un proveedor solista en el competidor más preparado del mercado. 13 agentes IA. Un método. Resultados medibles. 1∞."
       />
 
       {/* HERO */}
@@ -22,8 +22,17 @@ const Home = () => {
           絆
         </span>
         <div className="container relative">
-          <p className="eyebrow reveal">{t("home.heroEyebrow")}</p>
-          <h1 className="display mt-6 text-4xl md:text-7xl max-w-5xl reveal reveal-delay-1">
+          {/* 1∞ symbol prominently displayed */}
+          <div className="flex items-baseline gap-3 mb-6 reveal">
+            <span className="font-jp text-3xl md:text-4xl text-seal leading-none">絆</span>
+            <span className="inline-flex items-baseline gap-[3px] text-sm uppercase tracking-[0.22em] text-muted-foreground border-l border-foreground/15 pl-3 ml-1">
+              <span className="font-display text-foreground text-xl md:text-2xl">1</span>
+              <span className="font-display text-seal text-2xl md:text-3xl leading-none">∞</span>
+            </span>
+            <span className="text-xs uppercase tracking-[0.22em] text-muted-foreground">{t("home.heroEyebrow")}</span>
+          </div>
+
+          <h1 className="display mt-4 text-4xl md:text-7xl max-w-5xl reveal reveal-delay-1">
             {t("home.heroTitle")}
           </h1>
           <p className="mt-8 max-w-2xl text-lg text-foreground/75 leading-relaxed reveal reveal-delay-2">
@@ -51,6 +60,34 @@ const Home = () => {
           <div className="mt-16 reinforcement max-w-2xl text-lg reveal reveal-delay-3">
             {t("home.heroReinforcement")}
           </div>
+        </div>
+      </section>
+
+      <Divider />
+
+      {/* OPC SECTION — CLEAN LIF SPA */}
+      <section className="py-24 md:py-32 relative overflow-hidden">
+        <span className="kanji-mark absolute -left-10 top-10 text-[26rem] leading-none">人</span>
+        <div className="container relative">
+          <p className="eyebrow">{t("home.opcEyebrow")}</p>
+          <div className="mt-6 flex items-baseline gap-4">
+            <span className="font-display text-foreground text-5xl md:text-6xl">1</span>
+            <span className="font-display text-seal text-6xl md:text-7xl leading-none">∞</span>
+          </div>
+          <h2 className="display mt-6 text-3xl md:text-5xl max-w-4xl">{t("home.opcTitle")}</h2>
+          <p className="mt-8 max-w-3xl text-lg leading-relaxed text-foreground/80">{t("home.opcBody")}</p>
+          <p className="mt-4 max-w-3xl font-display text-2xl text-foreground">{t("home.opcBody2")}</p>
+
+          <div className="mt-14 grid md:grid-cols-3 gap-px bg-foreground/10 border border-foreground/10">
+            {[t("home.opcBlockA"), t("home.opcBlockB"), t("home.opcBlockC")].map((b, i) => (
+              <div key={i} className="bg-background p-8">
+                <p className="eyebrow text-foreground/50">{String(i + 1).padStart(2, "0")}</p>
+                <p className="mt-4 text-foreground/80 leading-relaxed text-sm">{b}</p>
+              </div>
+            ))}
+          </div>
+
+          <p className="mt-12 reinforcement max-w-3xl text-lg">{t("home.opcSlogan")}</p>
         </div>
       </section>
 

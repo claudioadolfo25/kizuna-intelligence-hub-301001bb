@@ -24,11 +24,18 @@ const DecisionCanvas = () => {
     <>
       <SEO title="Decision Canvas · Co-Kizuna" description="El lienzo Co-Kizuna: una página, nueve bloques, dieciocho minutos. Una decisión mejor documentada." />
 
-      <section className="pt-20 pb-12 md:pt-28 md:pb-16">
-        <div className="container">
+      <section className="pt-20 pb-12 md:pt-28 md:pb-16 relative overflow-hidden">
+        <span className="kanji-mark absolute -right-10 top-8 text-[24rem] hidden md:block">前提</span>
+        <div className="container relative">
           <p className="eyebrow">{t("nav.instruments")} · {t("nav.decisionCanvas")}</p>
           <h1 className="display mt-6 text-4xl md:text-6xl max-w-4xl">{t("instruments.canvasTitle")}</h1>
-          <p className="mt-8 max-w-2xl text-lg text-foreground/75">{t("instruments.canvasBody")}</p>
+          <p className="mt-6 max-w-2xl font-display text-2xl text-seal">
+            {lang === "es" ? "Ishikawa entiende el pasado. Zentei decide el futuro." : "Ishikawa understands the past. Zentei decides the future."}
+          </p>
+          <p className="mt-6 max-w-2xl text-lg text-foreground/75">{t("instruments.canvasBody")}</p>
+          <p className="mt-4 text-xs uppercase tracking-[0.22em] text-muted-foreground">
+            1∞ · {lang === "es" ? "Zentei antes de licitar." : "Zentei before bidding."}
+          </p>
         </div>
       </section>
 

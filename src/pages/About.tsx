@@ -57,10 +57,28 @@ const About = () => {
       <SEO title="Nosotros · Co-Kizuna" description="Metodología global de inteligencia para compras públicas. Definición, filosofía, origen, principios, visión y manifiesto Co-Kizuna." />
 
       {/* Hero */}
-      <section className="pt-20 pb-16 md:pt-28 md:pb-20">
-        <div className="container">
-          <p className="eyebrow">{t("nav.about")}</p>
+      <section className="pt-20 pb-16 md:pt-28 md:pb-20 relative overflow-hidden">
+        <span className="kanji-mark absolute -right-10 top-10 text-[26rem] hidden md:block">人</span>
+        <div className="container relative">
+          <p className="eyebrow">{t("nav.about")} · 1∞</p>
           <h1 className="display mt-6 text-4xl md:text-6xl max-w-5xl">{t("about.title")}</h1>
+
+          {/* Quién está detrás — voz humana al inicio */}
+          <div className="mt-12 max-w-3xl border-l-2 border-seal pl-6 py-2">
+            <p className="eyebrow text-foreground/60 mb-3">
+              {lang === "es" ? "Quién está detrás" : "Who is behind"}
+            </p>
+            <p className="font-display text-xl md:text-2xl text-foreground/90 leading-snug">
+              {lang === "es"
+                ? "Mi nombre es Claudio Adolfo Ayelef. Soy fundador y operador único de Co-Kizuna. CLEAN LIF SPA es la OPC desde la que opero. Un humano, trece agentes IA, una metodología."
+                : "My name is Claudio Adolfo Ayelef. I'm the founder and sole operator of Co-Kizuna. CLEAN LIF SPA is the OPC I operate from. One human, thirteen AI agents, one methodology."}
+            </p>
+            <p className="mt-4 text-sm text-muted-foreground">
+              <a href="#fundador" className="hover:text-seal transition-colors uppercase tracking-[0.18em] text-xs">
+                {lang === "es" ? "Conocer al fundador →" : "Meet the founder →"}
+              </a>
+            </p>
+          </div>
         </div>
       </section>
 
