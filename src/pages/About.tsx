@@ -5,6 +5,7 @@ import SEO from "@/components/SEO";
 import EmailCapture from "@/components/EmailCapture";
 import { principles, dimensions, objectives, roadmap } from "@/data/cokizuna";
 import { useLang, tx } from "@/lib/lang";
+import claudioPhoto from "@/assets/claudio-ayelef.png";
 
 const About = () => {
   const { t } = useTranslation();
@@ -19,19 +20,12 @@ const About = () => {
     { id: "vision", label: { es: "Visión", en: "Vision" } },
     { id: "alcance", label: { es: "Alcance", en: "Scope" } },
     { id: "objetivos", label: { es: "Objetivos", en: "Objectives" } },
-    { id: "equipo", label: { es: "Equipo", en: "Team" } },
+    { id: "fundador", label: { es: "Fundador", en: "Founder" } },
+    { id: "equipo", label: { es: "Red", en: "Network" } },
     { id: "manifiesto", label: { es: "Manifiesto", en: "Manifesto" } },
   ];
 
   const team = [
-    {
-      initials: "CK",
-      role: { es: "Fundador · Dirección metodológica", en: "Founder · Methodological direction" },
-      bio: {
-        es: "Lidera la doctrina Co-Kizuna y la integración con estándares internacionales (OCDE, BID).",
-        en: "Leads the Co-Kizuna doctrine and integration with international standards (OECD, IDB).",
-      },
-    },
     {
       initials: "AM",
       role: { es: "Asesor · Inteligencia de datos", en: "Advisor · Data intelligence" },
@@ -46,6 +40,14 @@ const About = () => {
       bio: {
         es: "Veinte años en pliegos, evaluación y auditoría en mercados latinoamericanos.",
         en: "Twenty years in tenders, evaluation and audit across Latin American markets.",
+      },
+    },
+    {
+      initials: "MK",
+      role: { es: "Aliado · Diseño metodológico", en: "Ally · Methodological design" },
+      bio: {
+        es: "Aporta disciplina kaizen a la doctrina de los doce principios.",
+        en: "Brings kaizen discipline to the doctrine of the twelve principles.",
       },
     },
   ];
