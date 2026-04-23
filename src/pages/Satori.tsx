@@ -161,10 +161,13 @@ const Satori = () => {
             ))}
           </div>
           <div className="mt-12 border border-foreground/15 p-8 max-w-2xl">
-            <p className="eyebrow mb-3">OPOC</p>
+            <p className="eyebrow mb-3">OPC model · 1∞</p>
             <h3 className="font-display text-2xl mb-2">Una Persona, Una Empresa.</h3>
             <p className="text-sm text-muted-foreground">
               Con SATORI, una sola persona puede operar como una empresa completa. Escala sin crecer tu equipo.
+              <span className="block mt-3 text-foreground/80 font-medium">
+                Una OPC con metodología Zentei vence a una firma de 50 personas sin método. Esa es la asimetría 1∞.
+              </span>
             </p>
           </div>
         </div>
