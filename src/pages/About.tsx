@@ -241,6 +241,56 @@ const About = () => {
 
       <Divider />
 
+      {/* Fundador · OPC */}
+      <section id="fundador" className="py-24 md:py-32 scroll-mt-32 relative overflow-hidden">
+        <span className="kanji-mark absolute -left-10 top-10 text-[26rem] leading-none select-none">絆</span>
+        <div className="container relative grid md:grid-cols-12 gap-12 items-start">
+          <div className="md:col-span-5">
+            <div className="aspect-[4/5] w-full overflow-hidden border border-foreground/10 bg-secondary">
+              <img
+                src={claudioPhoto}
+                alt={t("about.founderName")}
+                className="w-full h-full object-cover grayscale-[15%]"
+                loading="lazy"
+              />
+            </div>
+            <div className="mt-4 flex items-baseline gap-3 text-xs uppercase tracking-[0.22em] text-muted-foreground">
+              <span className="font-display text-base text-foreground">1</span>
+              <span className="font-display text-lg text-seal leading-none">∞</span>
+              <span>Un humano · trece agentes</span>
+            </div>
+          </div>
+
+          <div className="md:col-span-7">
+            <p className="eyebrow">{t("about.founderEyebrow")}</p>
+            <h2 className="display mt-5 text-3xl md:text-5xl">{t("about.founderName")}</h2>
+            <p className="mt-3 font-display text-xl text-foreground/75">{t("about.founderRole")}</p>
+            <p className="mt-8 max-w-2xl text-lg leading-relaxed text-foreground/80">
+              {t("about.founderBio")}
+            </p>
+            <p className="mt-8 max-w-2xl border-l-2 border-seal pl-6 font-display text-xl italic text-foreground/85">
+              {t("about.founderQuote")}
+            </p>
+            <div className="mt-10 flex flex-wrap gap-x-8 gap-y-4">
+              <Link
+                to="/contacto"
+                className="inline-flex items-center gap-2 bg-foreground text-background px-6 py-3 text-sm uppercase tracking-[0.18em] hover:bg-seal transition-colors"
+              >
+                {t("nav.demo")} <ArrowRight className="w-4 h-4" />
+              </Link>
+              <Link
+                to="/metodologia/principios"
+                className="inline-flex items-center gap-2 text-sm uppercase tracking-[0.18em] border-b border-foreground/40 pb-1 hover:border-seal hover:text-seal transition-colors"
+              >
+                {lang === "es" ? "Ver los 12 principios" : "See the 12 principles"} <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Divider />
+
       {/* Equipo */}
       <section id="equipo" className="py-24 md:py-32 scroll-mt-32">
         <div className="container">
