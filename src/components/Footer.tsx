@@ -13,11 +13,21 @@ const Footer = () => {
           <div className="flex items-center gap-3 mb-6">
             <span className="font-jp text-2xl text-seal leading-none">絆</span>
             <span className="font-display text-xl">Co-Kizuna</span>
+            <span className="inline-flex items-baseline gap-[2px] text-[11px] uppercase tracking-[0.22em] text-muted-foreground border-l border-foreground/15 pl-3 ml-1">
+              <span className="font-display text-foreground">1</span>
+              <span className="font-display text-seal text-base leading-none">∞</span>
+            </span>
           </div>
           <p className="font-display text-2xl leading-snug max-w-md text-foreground/90">
             {t("footer.tagline")}
           </p>
           <p className="mt-6 text-sm text-muted-foreground">{t("footer.origin")}</p>
+          <p className="mt-4 text-xs uppercase tracking-[0.18em] text-muted-foreground">
+            Una OPC operada por{" "}
+            <Link to="/nosotros#fundador" className="text-foreground hover:text-seal transition-colors">
+              Claudio Adolfo Ayelef
+            </Link>
+          </p>
         </div>
 
         {/* Navigate */}

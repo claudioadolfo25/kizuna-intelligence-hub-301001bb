@@ -35,9 +35,9 @@
     "explore": "Explore"
   },
   "home": {
-    "heroEyebrow": "Global methodology · Public procurement intelligence",
-    "heroTitle": "The intelligence that helps data-driven leaders win.",
-    "heroSubtitle": "Co-Kizuna is the global intelligence methodology for public procurement. In a competitive market, information isn't enough — intelligence is the difference.",
+    "heroEyebrow": "1 ∞ · One human. Thirteen agents.",
+    "heroTitle": "One human. Thirteen agents. More tenders won than a team of fifty.",
+    "heroSubtitle": "Co-Kizuna is the global intelligence methodology for public procurement run as a One-Person Company: one human up front, thirteen specialized agents behind. The 1∞ asymmetry that changes the rules.",
     "heroSupport": "A global reference. Chile is our origin. The world is our market.",
     "ctaMethod": "Explore methodology",
     "ctaInstruments": "View instruments",
@@ -116,9 +116,14 @@
     "objectivesTitle": "What we pursue.",
     "manifestoEyebrow": "Manifesto",
     "manifestoTitle": "The Co-Kizuna Manifesto.",
-    "teamEyebrow": "Team",
-    "teamTitle": "Who builds Co-Kizuna.",
-    "teamBody": "A network of practitioners combining Chilean public-procurement experience with Japanese methodological discipline.",
+    "founderEyebrow": "Founder · OPC",
+    "founderName": "Claudio Adolfo Ayelef",
+    "founderRole": "Founder and sole operator of Co-Kizuna",
+    "founderBio": "Behind this entire methodology there is a real person who uses it and tests it every day. Co-Kizuna operates as a One-Person Company (OPC): one human up front, thirteen specialized agents behind. The 1∞ asymmetry is not a slogan — it is the model.",
+    "founderQuote": "«I don't sell software and I don't sell hours. I sell the result of operating with thirteen agents while the competition operates with spreadsheets.»",
+    "teamEyebrow": "Extended network",
+    "teamTitle": "Advisors and allies.",
+    "teamBody": "Around the founder, a lean network of advisors contributing public-procurement, data and methodological-design experience.",
     "teamSoon": "Full bios coming soon."
   },
   "methodology": {

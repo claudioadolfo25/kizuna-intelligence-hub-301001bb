@@ -37,9 +37,16 @@ const Navbar = () => {
     >
       <div className="container flex items-center justify-between h-16 md:h-20">
         {/* Brand */}
-        <Link to="/" className="flex items-center gap-3 group" aria-label="Co-Kizuna">
+        <Link to="/" className="flex items-center gap-3 group" aria-label="Co-Kizuna · 1 humano, infinitos agentes">
           <span className="font-jp text-xl text-seal leading-none">絆</span>
           <span className="font-display text-lg tracking-tight">Co-Kizuna</span>
+          <span
+            className="hidden sm:inline-flex items-baseline gap-[2px] text-[11px] uppercase tracking-[0.22em] text-muted-foreground border-l border-foreground/15 pl-3 ml-1"
+            title="1 humano · ∞ agentes"
+          >
+            <span className="font-display text-foreground">1</span>
+            <span className="font-display text-seal text-base leading-none">∞</span>
+          </span>
         </Link>
 
         {/* Desktop nav */}

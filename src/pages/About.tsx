@@ -5,6 +5,7 @@ import SEO from "@/components/SEO";
 import EmailCapture from "@/components/EmailCapture";
 import { principles, dimensions, objectives, roadmap } from "@/data/cokizuna";
 import { useLang, tx } from "@/lib/lang";
+import claudioPhoto from "@/assets/claudio-ayelef.png";
 
 const About = () => {
   const { t } = useTranslation();
@@ -19,19 +20,12 @@ const About = () => {
     { id: "vision", label: { es: "Visión", en: "Vision" } },
     { id: "alcance", label: { es: "Alcance", en: "Scope" } },
     { id: "objetivos", label: { es: "Objetivos", en: "Objectives" } },
-    { id: "equipo", label: { es: "Equipo", en: "Team" } },
+    { id: "fundador", label: { es: "Fundador", en: "Founder" } },
+    { id: "equipo", label: { es: "Red", en: "Network" } },
     { id: "manifiesto", label: { es: "Manifiesto", en: "Manifesto" } },
   ];
 
   const team = [
-    {
-      initials: "CK",
-      role: { es: "Fundador · Dirección metodológica", en: "Founder · Methodological direction" },
-      bio: {
-        es: "Lidera la doctrina Co-Kizuna y la integración con estándares internacionales (OCDE, BID).",
-        en: "Leads the Co-Kizuna doctrine and integration with international standards (OECD, IDB).",
-      },
-    },
     {
       initials: "AM",
       role: { es: "Asesor · Inteligencia de datos", en: "Advisor · Data intelligence" },
@@ -46,6 +40,14 @@ const About = () => {
       bio: {
         es: "Veinte años en pliegos, evaluación y auditoría en mercados latinoamericanos.",
         en: "Twenty years in tenders, evaluation and audit across Latin American markets.",
+      },
+    },
+    {
+      initials: "MK",
+      role: { es: "Aliado · Diseño metodológico", en: "Ally · Methodological design" },
+      bio: {
+        es: "Aporta disciplina kaizen a la doctrina de los doce principios.",
+        en: "Brings kaizen discipline to the doctrine of the twelve principles.",
       },
     },
   ];
@@ -234,6 +236,56 @@ const About = () => {
               </li>
             ))}
           </ol>
+        </div>
+      </section>
+
+      <Divider />
+
+      {/* Fundador · OPC */}
+      <section id="fundador" className="py-24 md:py-32 scroll-mt-32 relative overflow-hidden">
+        <span className="kanji-mark absolute -left-10 top-10 text-[26rem] leading-none select-none">絆</span>
+        <div className="container relative grid md:grid-cols-12 gap-12 items-start">
+          <div className="md:col-span-5">
+            <div className="aspect-[4/5] w-full overflow-hidden border border-foreground/10 bg-secondary">
+              <img
+                src={claudioPhoto}
+                alt={t("about.founderName")}
+                className="w-full h-full object-cover grayscale-[15%]"
+                loading="lazy"
+              />
+            </div>
+            <div className="mt-4 flex items-baseline gap-3 text-xs uppercase tracking-[0.22em] text-muted-foreground">
+              <span className="font-display text-base text-foreground">1</span>
+              <span className="font-display text-lg text-seal leading-none">∞</span>
+              <span>Un humano · trece agentes</span>
+            </div>
+          </div>
+
+          <div className="md:col-span-7">
+            <p className="eyebrow">{t("about.founderEyebrow")}</p>
+            <h2 className="display mt-5 text-3xl md:text-5xl">{t("about.founderName")}</h2>
+            <p className="mt-3 font-display text-xl text-foreground/75">{t("about.founderRole")}</p>
+            <p className="mt-8 max-w-2xl text-lg leading-relaxed text-foreground/80">
+              {t("about.founderBio")}
+            </p>
+            <p className="mt-8 max-w-2xl border-l-2 border-seal pl-6 font-display text-xl italic text-foreground/85">
+              {t("about.founderQuote")}
+            </p>
+            <div className="mt-10 flex flex-wrap gap-x-8 gap-y-4">
+              <Link
+                to="/contacto"
+                className="inline-flex items-center gap-2 bg-foreground text-background px-6 py-3 text-sm uppercase tracking-[0.18em] hover:bg-seal transition-colors"
+              >
+                {t("nav.demo")} <ArrowRight className="w-4 h-4" />
+              </Link>
+              <Link
+                to="/metodologia/principios"
+                className="inline-flex items-center gap-2 text-sm uppercase tracking-[0.18em] border-b border-foreground/40 pb-1 hover:border-seal hover:text-seal transition-colors"
+              >
+                {lang === "es" ? "Ver los 12 principios" : "See the 12 principles"} <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 
