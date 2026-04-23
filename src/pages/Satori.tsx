@@ -52,7 +52,7 @@ const flow = [
 
 const testimonials = [
   { quote: "Aumentamos nuestra tasa de éxito del 23% al 78% en 3 meses. SATORI cambió nuestra forma de competir.", who: "Constructora ABC", role: "Proveedor categoría obras públicas" },
-  { quote: "Una sola persona en mi empresa hace ahora lo que antes requería un equipo de 5. OPOC es real.", who: "Servicios Tecnológicos M.", role: "Proveedor TI · Región Metropolitana" },
+  { quote: "Una sola persona en mi empresa hace ahora lo que antes requería un equipo de 50. El modelo OPC 1∞ es real.", who: "Servicios Tecnológicos M.", role: "Proveedor TI · Región Metropolitana" },
   { quote: "Ver a los agentes razonar en la sala Matrix me dio confianza. Ya no es una caja negra.", who: "Consultora del Sur", role: "Proveedor servicios profesionales" },
 ];
 
