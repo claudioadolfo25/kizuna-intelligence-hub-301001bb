@@ -220,7 +220,8 @@ const Satori = () => {
         <span className="kanji-mark absolute -left-8 top-10 text-[18rem] leading-none hidden md:block">七</span>
         <div className="container relative">
           <p className="eyebrow mb-6">七つの決定 · Las 7 decisiones</p>
-          <h2 className="display text-3xl md:text-5xl max-w-3xl mb-6">De los datos a la conclusión.</h2>
+          <h2 className="display text-3xl md:text-5xl max-w-3xl mb-3">De los datos a la conclusión.</h2>
+          <p className="font-display text-xl text-seal mb-6">1∞ · Zentei antes de licitar.</p>
           <p className="text-muted-foreground max-w-2xl mb-12">
             Seis decisiones en paralelo convergen en una séptima: el veredicto del experto.
           </p>
