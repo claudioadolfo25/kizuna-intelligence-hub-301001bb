@@ -35,9 +35,9 @@
     "explore": "Explorar"
   },
   "home": {
-    "heroEyebrow": "Metodología global · Inteligencia para compras públicas",
-    "heroTitle": "La inteligencia que hace ganar a quienes deciden con datos.",
-    "heroSubtitle": "Co-Kizuna es la metodología global de inteligencia para compras públicas. Porque en un mercado competitivo, la información no es suficiente — la inteligencia es la diferencia.",
+    "heroEyebrow": "1 ∞ · Un humano. Trece agentes.",
+    "heroTitle": "Un humano. Trece agentes. Más licitaciones ganadas que un equipo de cincuenta.",
+    "heroSubtitle": "Co-Kizuna es la metodología global de inteligencia para compras públicas operada como OPC: una persona al frente, trece agentes especializados detrás. La asimetría 1∞ que cambia las reglas.",
     "heroSupport": "Referencia global. Chile, nuestro origen. El mundo, nuestro mercado.",
     "ctaMethod": "Explorar metodología",
     "ctaInstruments": "Ver instrumentos",
@@ -116,9 +116,14 @@
     "objectivesTitle": "Lo que perseguimos.",
     "manifestoEyebrow": "Manifiesto",
     "manifestoTitle": "Manifiesto Co-Kizuna.",
-    "teamEyebrow": "Equipo",
-    "teamTitle": "Quienes construyen Co-Kizuna.",
-    "teamBody": "Una red de practicantes que combina experiencia chilena en compras públicas con disciplina metodológica japonesa.",
+    "founderEyebrow": "Fundador · OPC",
+    "founderName": "Claudio Adolfo Ayelef",
+    "founderRole": "Fundador y operador único de Co-Kizuna",
+    "founderBio": "Detrás de toda esta metodología hay una persona real que la usa y la prueba cada día. Co-Kizuna opera como One-Person Company (OPC): un humano al frente, trece agentes especializados detrás. La asimetría 1∞ no es un eslogan — es el modelo.",
+    "founderQuote": "«No vendo software ni vendo horas. Vendo el resultado de operar con trece agentes mientras la competencia opera con planillas.»",
+    "teamEyebrow": "Red extendida",
+    "teamTitle": "Asesores y aliados.",
+    "teamBody": "Alrededor del fundador, una red ligera de asesores que aporta experiencia en compras públicas, datos y diseño metodológico.",
     "teamSoon": "Bios completas próximamente."
   },
   "methodology": {
