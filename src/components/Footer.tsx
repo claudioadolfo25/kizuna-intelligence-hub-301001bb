@@ -51,6 +51,8 @@ const Footer = () => {
             <li><Link to="/metodologia/principios" className="hover:text-seal transition-colors">{t("nav.principles")}</Link></li>
             <li><Link to="/metodologia/decisiones" className="hover:text-seal transition-colors">{t("nav.decisions")}</Link></li>
             <li><Link to="/instrumentos/decision-canvas" className="hover:text-seal transition-colors">{t("nav.decisionCanvas")}</Link></li>
+            <li><Link to="/satori" className="hover:text-seal transition-colors"><span className="font-jp mr-1">悟</span>SATORI</Link></li>
+            <li><Link to="/satori/miko-manager" className="hover:text-seal transition-colors">Miko & Manager</Link></li>
           </ul>
         </div>
 

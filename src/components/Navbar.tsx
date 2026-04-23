@@ -101,6 +101,9 @@ const Navbar = () => {
           <NavLink to="/herramientas" className={linkCls}>
             {t("nav.tools")}
           </NavLink>
+          <NavLink to="/satori" className={linkCls}>
+            <span className="font-jp mr-1 text-seal">悟</span>SATORI
+          </NavLink>
           <NavLink to="/soluciones" className={linkCls}>
             {t("nav.solutions")}
           </NavLink>
@@ -145,6 +148,8 @@ const Navbar = () => {
             <MobileLink to="/instrumentos" label={t("nav.instruments")} />
             <MobileLink to="/instrumentos/decision-canvas" label={`— ${t("nav.decisionCanvas")}`} indent />
             <MobileLink to="/herramientas" label={t("nav.tools")} />
+            <MobileLink to="/satori" label="悟 SATORI" />
+            <MobileLink to="/satori/miko-manager" label="— Miko & Manager" indent />
             <MobileLink to="/soluciones" label={t("nav.solutions")} />
             <MobileLink to="/impacto" label={t("nav.impact")} />
             <MobileLink to="/recursos" label={t("nav.resources")} />
