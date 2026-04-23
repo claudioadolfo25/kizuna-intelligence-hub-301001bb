@@ -23,10 +23,12 @@ const Footer = () => {
           </p>
           <p className="mt-6 text-sm text-muted-foreground">{t("footer.origin")}</p>
           <p className="mt-4 text-xs uppercase tracking-[0.18em] text-muted-foreground">
-            Una OPC operada por{" "}
             <Link to="/nosotros#fundador" className="text-foreground hover:text-seal transition-colors">
               Claudio Adolfo Ayelef
             </Link>
+            <span className="block mt-1 normal-case tracking-[0.14em] text-[11px]">
+              Fundador · CLEAN LIF SPA OPC · 1∞
+            </span>
           </p>
         </div>
 
