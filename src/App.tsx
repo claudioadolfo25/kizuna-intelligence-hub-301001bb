@@ -20,6 +20,8 @@ import Resources from "./pages/Resources";
 import Contact from "./pages/Contact";
 import ContactAreas from "./pages/ContactAreas";
 import NotFound from "./pages/NotFound";
+import Satori from "./pages/Satori";
+import MikoManager from "./pages/MikoManager";
 
 const queryClient = new QueryClient();
 
@@ -46,6 +48,8 @@ const App = () => (
               <Route path="/recursos" element={<Resources />} />
               <Route path="/contacto" element={<ContactAreas />} />
               <Route path="/contacto/formulario" element={<Contact />} />
+              <Route path="/satori" element={<Satori />} />
+              <Route path="/satori/miko-manager" element={<MikoManager />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Layout>
