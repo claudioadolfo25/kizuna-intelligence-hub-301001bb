@@ -23,6 +23,129 @@ const Methodology = () => {
 
       <div className="container"><div className="hairline" /></div>
 
+      {/* Built to win — narrative intro */}
+      <section className="py-24 md:py-32">
+        <div className="container">
+          <p className="eyebrow">{lang === "es" ? "Metodología · Co-Kizuna" : "Methodology · Co-Kizuna"}</p>
+          <h2 className="display mt-6 text-4xl md:text-6xl max-w-4xl leading-[1.05]">
+            {lang === "es" ? (
+              <>Construida para ganar.<br /><span className="text-foreground/55">No para explicar por qué se perdió.</span></>
+            ) : (
+              <>Built to win.<br /><span className="text-foreground/55">Not to explain why one lost.</span></>
+            )}
+          </h2>
+          <p className="mt-10 max-w-3xl text-lg text-foreground/75 leading-relaxed">
+            {lang === "es"
+              ? "Co-Kizuna nació de 25 años operando en compras públicas desde Lautaro, La Araucanía. No de un laboratorio. No de un paper. De licitar, ganar, perder, aprender — y sistematizar cada paso hasta convertirlo en método replicable."
+              : "Co-Kizuna emerged from 25 years operating in public procurement from Lautaro, La Araucanía. Not from a lab. Not from a paper. From bidding, winning, losing, learning — and systematizing every step into a replicable method."}
+          </p>
+
+          {/* Origin block */}
+          <div className="mt-20 grid md:grid-cols-12 gap-10 items-start">
+            <div className="md:col-span-3">
+              <span className="font-display text-7xl md:text-8xl text-seal leading-none">1∞</span>
+              <p className="eyebrow mt-4">{lang === "es" ? "El origen real" : "The real origin"}</p>
+            </div>
+            <div className="md:col-span-9 space-y-4 text-foreground/80 leading-relaxed">
+              <p>
+                {lang === "es"
+                  ? "Un fundador. $2.303 millones CLP gestionados en contratos con el Estado. 5 de 5 licitaciones adjudicadas. Posición #1.931 entre más de 50.000 proveedores nacionales. +693% de crecimiento en facturación en un año."
+                  : "One founder. CLP $2,303 million managed in State contracts. 5 of 5 tenders awarded. Ranked #1,931 among more than 50,000 national suppliers. +693% revenue growth in one year."}
+              </p>
+              <p className="text-foreground/60 italic">
+                {lang === "es"
+                  ? "Todos los datos verificables en mercadopublico.cl. Lo que se construyó primero como práctica, hoy es metodología."
+                  : "All data verifiable at mercadopublico.cl. What was first built as practice is today methodology."}
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div className="container"><div className="hairline" /></div>
+
+      {/* Why · How · What */}
+      <section className="py-24">
+        <div className="container">
+          <p className="eyebrow">{lang === "es" ? "Por qué · Cómo · Qué" : "Why · How · What"}</p>
+          <div className="mt-12 grid md:grid-cols-3 gap-px bg-foreground/10 border border-foreground/10">
+            {[
+              {
+                tag: lang === "es" ? "Por qué nació" : "Why it was born",
+                title: lang === "es"
+                  ? "El mercado premia el volumen de análisis, no la calidad de la oferta."
+                  : "The market rewards volume of analysis, not quality of bid.",
+                body: lang === "es"
+                  ? "Los grandes ganan porque procesan más — cien páginas de pliego en paralelo, historial interno, conocimiento del evaluador. El proveedor solista con oferta real pierde en la última página. No por precio. Por falta de infraestructura de inteligencia. Co-Kizuna existe para resolver eso."
+                  : "Large players win because they process more — a hundred pages of specs in parallel, internal history, evaluator knowledge. The solo provider with the real bid loses on the last page. Not on price. On lack of intelligence infrastructure. Co-Kizuna exists to solve that.",
+              },
+              {
+                tag: lang === "es" ? "Cómo funciona" : "How it works",
+                title: lang === "es"
+                  ? "Metodología primero. Tecnología después. Siempre en ese orden."
+                  : "Methodology first. Technology after. Always in that order.",
+                body: lang === "es"
+                  ? "Antes de automatizar, Co-Kizuna ordena. 12 principios que gobiernan cada análisis. 11 dimensiones que cubren cada ángulo del ecosistema. 6 decisiones estructuradas que convierten inteligencia en acción. El método hace confiable a la máquina — no al revés."
+                  : "Before automating, Co-Kizuna orders. 12 principles governing every analysis. 11 dimensions covering every angle of the ecosystem. 6 structured decisions turning intelligence into action. The method makes the machine trustworthy — not the other way around.",
+              },
+              {
+                tag: lang === "es" ? "Qué es" : "What it is",
+                title: lang === "es"
+                  ? "Un cuerpo de principios, no un software ni un portal."
+                  : "A body of principles, not a software or a portal.",
+                body: lang === "es"
+                  ? "Co-Kizuna es ontología universal para inteligencia en compras públicas. Principios, procedimientos y herramientas que transforman datos abiertos en conocimiento accionable. Construido en Chile. Diseñado para cualquier mercado donde el Estado compre y el proveedor quiera ganar."
+                  : "Co-Kizuna is universal ontology for public procurement intelligence. Principles, procedures and tools that turn open data into actionable knowledge. Built in Chile. Designed for any market where the State buys and the supplier wants to win.",
+              },
+            ].map((b, i) => (
+              <div key={i} className="bg-background p-10">
+                <p className="eyebrow text-foreground/40">{String(i + 1).padStart(2, "0")} · {b.tag}</p>
+                <h3 className="font-display text-2xl mt-4 leading-snug">{b.title}</h3>
+                <p className="mt-5 text-foreground/70 leading-relaxed">{b.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <div className="container"><div className="hairline" /></div>
+
+      {/* Founder quote */}
+      <section className="py-24">
+        <div className="container">
+          <blockquote className="font-display text-2xl md:text-4xl leading-snug max-w-4xl text-foreground/90">
+            {lang === "es"
+              ? "«No construimos donde la demanda estaba probada. Construimos donde la infraestructura de inteligencia era el requisito previo para que la demanda pudiera existir.»"
+              : "«We didn't build where demand was proven. We built where intelligence infrastructure was the prerequisite for demand to exist.»"}
+          </blockquote>
+          <p className="mt-6 eyebrow text-foreground/60">— Claudio Ayelef · {lang === "es" ? "Fundador" : "Founder"} · Co-Kizuna</p>
+        </div>
+      </section>
+
+      <div className="container"><div className="hairline" /></div>
+
+      {/* Structure of the method */}
+      <section className="py-24">
+        <div className="container">
+          <p className="eyebrow">{lang === "es" ? "La estructura del método" : "The structure of the method"}</p>
+          <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-foreground/10 border border-foreground/10">
+            {[
+              { n: "12", t: lang === "es" ? "Principios operativos. Cada uno con su esencia, aplicación y antiprincipio." : "Operational principles. Each with its essence, application and antiprinciple." },
+              { n: "11", t: lang === "es" ? "Dimensiones de análisis para entender cualquier ecosistema de compras." : "Dimensions of analysis to understand any procurement ecosystem." },
+              { n: "6", t: lang === "es" ? "Decisiones que convierten la inteligencia en acción concreta." : "Decisions that turn intelligence into concrete action." },
+              { n: "4", t: lang === "es" ? "Fases del ciclo operativo con aprendizaje que retorna al inicio." : "Phases of the operating cycle with learning that returns to the start." },
+            ].map((b, i) => (
+              <div key={i} className="bg-background p-10">
+                <span className="font-display text-6xl md:text-7xl text-seal leading-none">{b.n}</span>
+                <p className="mt-6 text-foreground/75 leading-relaxed">{b.t}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <div className="container"><div className="hairline" /></div>
+
       {/* Quick links */}
       <section className="py-20">
         <div className="container grid md:grid-cols-3 gap-px bg-foreground/10 border border-foreground/10">
