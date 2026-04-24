@@ -13,21 +13,11 @@ const Methodology = () => {
     <>
       <SEO title="Metodología · Co-Kizuna" description="12 principios operativos. 11 dimensiones de análisis. 6 decisiones Co-Kizuna. Una metodología validada por estándares internacionales." />
 
-      <section className="pt-20 pb-16 md:pt-28 md:pb-24">
-        <div className="container">
-          <p className="eyebrow">{t("nav.methodology")}</p>
-          <h1 className="display mt-6 text-4xl md:text-6xl max-w-5xl">{t("methodology.title")}</h1>
-          <p className="mt-8 max-w-3xl text-lg text-foreground/75 leading-relaxed">{t("methodology.intro")}</p>
-        </div>
-      </section>
-
-      <div className="container"><div className="hairline" /></div>
-
       {/* Built to win — narrative intro */}
-      <section className="py-24 md:py-32">
+      <section className="pt-20 pb-16 md:pt-28 md:pb-20">
         <div className="container">
           <p className="eyebrow">{lang === "es" ? "Metodología · Co-Kizuna" : "Methodology · Co-Kizuna"}</p>
-          <h2 className="display mt-6 text-4xl md:text-6xl max-w-4xl leading-[1.05]">
+          <h1 className="display mt-6 text-4xl md:text-6xl max-w-4xl leading-[1.05]">
             {lang === "es" ? (
               <>Construida para ganar.<br /><span className="text-foreground/55">No para explicar por qué se perdió.</span></>
             ) : (
