@@ -23,7 +23,7 @@ const Methodology = () => {
             ) : (
               <>Built to win.<br /><span className="text-foreground/55">Not to explain why one lost.</span></>
             )}
-          </h2>
+          </h1>
           <p className="mt-10 max-w-3xl text-lg text-foreground/75 leading-relaxed">
             {lang === "es"
               ? "Co-Kizuna nació de 25 años operando en compras públicas desde Lautaro, La Araucanía. No de un laboratorio. No de un paper. De licitar, ganar, perder, aprender — y sistematizar cada paso hasta convertirlo en método replicable."
@@ -49,6 +49,17 @@ const Methodology = () => {
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      <div className="container"><div className="hairline" /></div>
+
+      {/* Methodology summary — short title */}
+      <section className="py-20 md:py-24">
+        <div className="container">
+          <p className="eyebrow">{t("nav.methodology")}</p>
+          <h2 className="display mt-6 text-3xl md:text-5xl max-w-5xl">{t("methodology.title")}</h2>
+          <p className="mt-8 max-w-3xl text-lg text-foreground/75 leading-relaxed">{t("methodology.intro")}</p>
         </div>
       </section>
 
